@@ -15,4 +15,4 @@ public static class MockDatabaseHelper
             .UseInternalServiceProvider(serviceProvider);
         return builder.Options;
     }
-}
+}   
