@@ -37,3 +37,24 @@ namespace Weather.Test.Persistence
 
         }
     }
+    [Fact]
+    public void CreateCityShouldThrowException()
+    {
+        this.Given(x => GivenADatabase("TestDb"))
+            .Given(x => GivenTheDatabaseHasACity(_testData))
+            .When(x => WhenCreateSameIdIsCalledWithTheCityAsync(_testData))
+            .Then(x => ThenItShouldBeSuccessful())
+            .BDDfy();
+    }
+    private void GivenTheDatabaseHasACity(City city)
+    {
+        _appContext.Cities.Add(city);
+        _appContext.SaveChanges();
+    }
+    private async Task WhenCreateSameIdIsCalledWithTheCityAsync(City city)
+    {
+        await Assert.ThrowsAsync<ArgumentException>(async () => await _subject.AddEntity(city));
+    }
+    private void ThenItShouldBeSuccessful()
+    { }
+}
