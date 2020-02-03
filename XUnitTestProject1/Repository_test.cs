@@ -15,7 +15,7 @@ using Xunit;
 
 namespace Weather.Test.Persistence
 {
-    public class RepositoryTest
+    public class RepositoryTest 
     {
         private DbContextOptions<WeatherDbContext> _contextOptions;
         private City _testData;
