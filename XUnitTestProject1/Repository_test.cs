@@ -18,7 +18,7 @@ namespace Weather.Test.Persistence
     public class RepositoryTest 
     {
         private DbContextOptions<WeatherDbContext> _contextOptions;
-        private City _testData;  
+        private City _testData;    
         private WeatherDbContext _appContext;
         private IOptions<DbContextSettings> _settings;
         private IDbContextFactory _dbContextFactory;  
