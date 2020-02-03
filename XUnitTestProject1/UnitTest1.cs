@@ -12,7 +12,7 @@ public static class MockDatabaseHelper
         // InMemory database and the new service provider    
         var builder = new DbContextOptionsBuilder<WeatherDbContext>();
         builder.UseInMemoryDatabase(databaseName)
-            .UseInternalServiceProvider(serviceProvider);
+            .UseInternalServiceProvider(serviceProvider); 
         return builder.Options;
     }
 }   

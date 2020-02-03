@@ -197,7 +197,7 @@ namespace Weather.Persistence
         {
             return Uncapitalize(Pascalize(lowercaseAndUnderscoredWord));
         }
-
+         
         public static string Underscore(this string pascalCasedWord)
         {
             return Regex.Replace(
