@@ -13,7 +13,7 @@ namespace Weather.Test.Controllers
 {
     public class CitiesControllerTest
     {
-        private ICityService _service;
+        private ICityService _service;  
         private CitiesController _controller;
         private City _testData;
         private ActionResult<City> _result;
