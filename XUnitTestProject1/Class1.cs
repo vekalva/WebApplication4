@@ -27,7 +27,7 @@ namespace Weather.Test.Controllers
                 .When(x => WhenGetCalledAsync())
                 .Then(x => ThenResultShouldBeOk())
                 .BDDfy();
-        }
+        } 
 
         [Fact]
         public void PostCallService()
