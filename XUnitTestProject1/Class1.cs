@@ -32,7 +32,7 @@ namespace Weather.Test.Controllers
         [Fact]
         public void PostCallService()
         {
-            this.Given(x => GivenCitiesControllerSetup())
+            this.Given(x => GivenCitiesControllerSetup()) 
                 .When(x => WhenPostCalledAsync())
                 .Then(x => ThenItShouldCallUpdateAccessedCityInService())
                 .BDDfy();
